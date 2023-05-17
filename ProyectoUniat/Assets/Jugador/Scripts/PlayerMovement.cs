@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     //Movimiento
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float jumpingPower = 23f;
     private bool crouchHeld= false, underPlataform =false;
     [SerializeField] private Rigidbody2D rbb;
     [SerializeField] private Transform groundCheck;
@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.tag == "Sword")
         {
-            TakeDmg(20);
+            TakeDmg(10);
             Destroy(other.gameObject);
         }
     }
