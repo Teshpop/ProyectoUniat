@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    void Start()
+    //Comienzo de desarrollo de checkpoint (sin terminar)
+    /*private static GameManager instance;
+    private void Awake()
     {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
+        if(instance==null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }*/
     public void RestartLvl()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
