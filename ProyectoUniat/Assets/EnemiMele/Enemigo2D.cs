@@ -19,7 +19,6 @@ public class Enemigo2D : MonoBehaviour
     public GameObject Hit;
 
     public int health = 10;
-    public GameObject Enemy;
 
     // Start is called before the first frame update
     void Start()
@@ -121,7 +120,7 @@ public class Enemigo2D : MonoBehaviour
         Comportamientos();
         if (health <= 0)
         {
-            Destroy(Enemy);
+            Destroy(gameObject);
         }
     }
     public void TakeDmg(int a)

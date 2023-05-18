@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(attackP.position, attackR);
     }
     //Salud
-    void TakeDmg(float a)
+    public void TakeDmg(float a)
     {
         hAct -= a;
         hBar.fillAmount = hAct / hMax;
@@ -125,11 +125,14 @@ public class PlayerMovement : MonoBehaviour
             TakeDmg(10);
             Destroy(other.gameObject);
         }
-        if (other.gameObject.tag == "Sword")
+        //Debug.Log(other.GetComponent<HitEnemigo2D>().enemigo.atacando);
+        //Debug.Log(other.name);
+        /*if (other.gameObject.tag == "Sword" && other.GetComponent<HitEnemigo2D>().enemigo.atacando)
         {
             TakeDmg(10);
-            Destroy(other.gameObject);
-        }
+            
+            //Destroy(other.gameObject);
+        }*/
     }
     //plataformas
     private void OnCollisionEnter2D(Collision2D coll)

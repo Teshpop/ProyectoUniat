@@ -11,8 +11,9 @@ public class RangoEnemigo2D : MonoBehaviour
     {
         if (coll.CompareTag("Player"))
         {
-            enemigo.atacando = true;
-            GetComponent<BoxCollider2D>().enabled = false;
+            //enemigo.atacando = true;
+            //GetComponent<BoxCollider2D>().enabled = false;
+            Invoke("Atacarx2", 1f);
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -20,12 +21,16 @@ public class RangoEnemigo2D : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //enemigo.atacando = false;
-            enemigo.GetComponent<Enemigo2D>().Final_Ani();
+            enemigo.GetComponent<Enemigo2D>().Final_Ani(); //atacando se vuelve false
         }
     }
 
+    void Atacarx2()
+    {
+        enemigo.atacando = true;
+        //GetComponent<BoxCollider2D>().enabled = true;
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         
