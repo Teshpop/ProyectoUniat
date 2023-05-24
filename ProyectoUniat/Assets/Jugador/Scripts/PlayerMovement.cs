@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -150,11 +151,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator noColision()
     {
-        BoxCollider2D plataformaCol = plataformaAct.GetComponent<BoxCollider2D>();
+        TilemapCollider2D plataformaCol = plataformaAct.GetComponent<TilemapCollider2D>();
         Physics2D.IgnoreCollision(bxCollider, plataformaCol);
         Physics2D.IgnoreCollision(cirCollider,plataformaCol);
         //bxCollider.isTrigger= true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.25f);
         Physics2D.IgnoreCollision(bxCollider, plataformaCol, false);
         Physics2D.IgnoreCollision(cirCollider, plataformaCol,false);
         //bxCollider.isTrigger= false;

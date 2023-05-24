@@ -16,6 +16,7 @@ public class HitEnemigo2D : MonoBehaviour
             {
                 hitLag= 0;
                 airePolaco = true;
+                enemigo.atacando = false;
             }
         }
         
@@ -41,6 +42,8 @@ public class HitEnemigo2D : MonoBehaviour
                 tocacion.GetComponent<PlayerMovement>().TakeDmg(10);
                 StartCoroutine(doWamacion());
                 airePolaco = false;
+                Debug.Log("Quedante");
+
             }
         }
         
@@ -56,7 +59,8 @@ public class HitEnemigo2D : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             enemigo.atacando = false;
-            //enemigo.Final_Ani();
+            enemigo.Final_Ani();
+            Debug.Log("Saliente");
         }
     }
     private IEnumerator doWamacion()
