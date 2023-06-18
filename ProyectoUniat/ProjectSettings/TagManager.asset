@@ -9,6 +9,7 @@ TagManager:
   - EnemyD
   - Bullet
   - Plataforma
+  - GM
   layers:
   - Default
   - TransparentFX
