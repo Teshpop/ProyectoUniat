@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Enemigo : MonoBehaviour
 {
     public float tiempoEntreDisparos = 2f;
-    public GameObject Enemy;
     public GameObject balaPrefab;
     public Transform puntoDisparo;
-    public int Health=10;
-    private float tiempoUltimoDisparo;
+    public int Health = 10;
     public float BulletTime2Live;
-    
+
+    private Transform jugador;
+    private float tiempoUltimoDisparo;
+
+    private void Start()
+    {
+        jugador = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void Update()
     {
@@ -22,26 +26,30 @@ public class Enemigo : MonoBehaviour
             Disparar();
             tiempoUltimoDisparo = Time.time;
         }
+
         if (Health <= 0)
         {
-            Destroy(Enemy);
+            Destroy(gameObject);
         }
     }
 
     private void Disparar()
     {
-        // Instanciar la bala en el punto de disparo y darle una velocidad inicial
+        // Calcular la dirección del jugador en relación a la torreta
+        Vector2 direccion = jugador.position - transform.position;
+        direccion.Normalize();
+
+        // Instanciar la bala en el punto de disparo y darle una velocidad inicial en la dirección correcta
         GameObject bala = Instantiate(balaPrefab, puntoDisparo.position, Quaternion.identity);
         Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
-        rbBala.velocity = Vector2.left * 10f;
+        rbBala.velocity = direccion * 10f;
 
         Destroy(bala, BulletTime2Live);
-
     }
-    
-    public void TakeDmg(int a)
+
+    public void TakeDmg(int damage)
     {
-        Health -= a;
-    }    
+        Health -= damage;
+    }
 }
 

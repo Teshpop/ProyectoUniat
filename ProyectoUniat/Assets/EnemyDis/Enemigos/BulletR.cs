@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BulletR : MonoBehaviour
 {
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bullet"))
+        if (!other.CompareTag("Enemy") && !other.CompareTag("Bullet"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
+
