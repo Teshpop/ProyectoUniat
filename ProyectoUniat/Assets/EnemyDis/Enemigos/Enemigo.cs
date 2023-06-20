@@ -44,6 +44,9 @@ public class Enemigo : MonoBehaviour
         Rigidbody2D rbBala = bala.GetComponent<Rigidbody2D>();
         rbBala.velocity = direccion * 10f;
 
+        // Establecer la rotación del proyectil basada en la dirección de movimiento
+        bala.transform.up = direccion;
+
         Destroy(bala, BulletTime2Live);
     }
 

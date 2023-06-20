@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemigoDis : MonoBehaviour
 {
     public Transform puntoInstancia;
-    public GameObject bala;
+    public GameObject balaPrefab;
     private float tiempo;
     private Transform jugador;
 
@@ -23,9 +23,19 @@ public class EnemigoDis : MonoBehaviour
 
         if (tiempo >= 2 && Mathf.Sign(direccion.x) == Mathf.Sign(transform.localScale.x))
         {
-            Instantiate(bala, puntoInstancia.position, Quaternion.identity);
+            // Instanciar la bala
+            GameObject bala = Instantiate(balaPrefab, puntoInstancia.position, Quaternion.identity);
+
+            // Calcular el ángulo de rotación en grados
+            float angle = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+
+            // Rotar el sprite del proyectil según el ángulo de rotación
+            SpriteRenderer spriteRenderer = bala.GetComponent<SpriteRenderer>();
+            spriteRenderer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
             tiempo = 0;
         }
     }
 }
+
 
