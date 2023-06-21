@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Plataforma
   - GM
+  - Knife
   layers:
   - Default
   - TransparentFX

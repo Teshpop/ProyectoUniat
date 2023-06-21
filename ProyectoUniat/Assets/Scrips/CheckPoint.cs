@@ -5,7 +5,6 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     private GameMaster gm;
-
     private void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
@@ -15,6 +14,7 @@ public class CheckPoint : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             gm.lastChecPointsPos = transform.position;
+            gm.PosAbrir = transform.position;
         }
     }
 }

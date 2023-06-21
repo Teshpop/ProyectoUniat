@@ -54,5 +54,14 @@ public class Enemigo : MonoBehaviour
     {
         Health -= damage;
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if (col.CompareTag("Knife"))
+        {
+            TakeDmg(10);
+            Destroy(col.gameObject);
+        }        
+    }
 }
 

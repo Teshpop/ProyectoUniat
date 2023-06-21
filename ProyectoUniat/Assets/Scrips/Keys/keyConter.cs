@@ -6,7 +6,7 @@ public class keyConter : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D Puerta;
     [SerializeField] private SpriteRenderer puertaObject;
-    [SerializeField] private int keys, contador;
+    [SerializeField] public int keys, contador;
 
     
     public void keyAgarrado()

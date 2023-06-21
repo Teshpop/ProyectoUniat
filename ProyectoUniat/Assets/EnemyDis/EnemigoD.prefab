@@ -147,11 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoEntreDisparos: 2
-  Enemy: {fileID: 459444858728232749}
   balaPrefab: {fileID: 459444859135249346}
   puntoDisparo: {fileID: 459444859135249347}
   Health: 10
-  BulletTime2Live: 2
+  BulletTime2Live: 1
 --- !u!1 &459444859135249346
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +200,7 @@ BoxCollider2D:
   m_Offset: {x: -0.0051567666, y: 0.03460226}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 1, y: 0.5}
     oldSize: {x: 0.18, y: 0.07}
     newSize: {x: 0.18, y: 0.07}
     adaptiveTilingThreshold: 0.5
