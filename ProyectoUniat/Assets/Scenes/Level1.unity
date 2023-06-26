@@ -68952,6 +68952,7 @@ MonoBehaviour:
   fireP: {fileID: 1237837497}
   knifepref: {fileID: 7284260135824047235, guid: b8784a9288562d34b9a6ed74c726a6cc, type: 3}
   time2Liv: 1
+  cooldownTime: 2
 --- !u!1 &1945027837
 GameObject:
   m_ObjectHideFlags: 0
