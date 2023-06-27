@@ -19,9 +19,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }*/
+    public string RestardLvl;
     public void RestartLvl()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(RestardLvl);
     }
 }
