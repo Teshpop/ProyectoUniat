@@ -14,7 +14,7 @@ public class BossHealth : MonoBehaviour
 
     public GameObject VisualHBB;
     public Image BHBar;
-
+    public GameObject plataformaRota;
     private void Start()
     {
         health = maxHealth;
@@ -50,6 +50,7 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        plataformaRota.SetActive(false);
         Destroy(Jefe);
         VisualHBB.SetActive(true);
     }

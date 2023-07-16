@@ -13,8 +13,10 @@ public class Enemigo : MonoBehaviour
     private Transform jugador;
     private float tiempoUltimoDisparo;
 
+    private Animator animator;
     private void Start()
     {
+        animator = GetComponent<Animator>();
         jugador = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -35,6 +37,7 @@ public class Enemigo : MonoBehaviour
 
     private void Disparar()
     {
+        animator.SetTrigger("Attack");
         // Calcular la dirección del jugador en relación a la torreta
         Vector2 direccion = jugador.position - transform.position;
         direccion.Normalize();
