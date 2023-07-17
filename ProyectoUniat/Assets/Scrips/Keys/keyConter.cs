@@ -8,16 +8,22 @@ public class keyConter : MonoBehaviour
     [SerializeField] private SpriteRenderer puertaObject;
     [SerializeField] public int keys, contador;
 
-    
+    private void Start()
+    {
+        PuertaAbierta();
+    }
+
     public void keyAgarrado()
     {
         keys++;
+        PlayerPrefs.SetInt("llavesSave", keys);
+        Debug.Log(PlayerPrefs.GetInt("llavesSave"));
         PuertaAbierta();
     }
 
     private void PuertaAbierta()
     {
-        if(keys >= contador)
+        if (PlayerPrefs.GetInt("llavesSave") >= contador)
         {
             Puerta.isTrigger = true;
             puertaObject.color = Color.white;
