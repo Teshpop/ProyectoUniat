@@ -7,14 +7,13 @@ public class PlayerCombat : MonoBehaviour
     public Transform attackP;
     public float attackR;
     public LayerMask enemyLayer;
-
-
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
+            GetComponent<AudioSource>().Play();
         }
     }
     void Attack()
