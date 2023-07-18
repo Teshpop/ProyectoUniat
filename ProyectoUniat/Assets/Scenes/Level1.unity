@@ -1212,7 +1212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372179635423, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0129
+      value: -0.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803901372179635423, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655812, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Enabled
@@ -1251,6 +1255,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655817, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1940145971}
+    - target: {fileID: 5803901372898655817, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: cirCollider
       value: 
       objectReference: {fileID: 1940145964}
@@ -1261,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: 5803901372898655818, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 038c61139b3ab4b4a863db2e219c8749, type: 3}
+      objectReference: {fileID: 21300000, guid: 0a223087013b977478dc4a12c1513098, type: 3}
     - target: {fileID: 5803901372898655818, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_DrawMode
       value: 0
@@ -1276,15 +1284,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655819, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Radius
-      value: 0.32644185
+      value: 0.35159492
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655819, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0043874923
+      value: -0.13738434
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655819, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Offset.y
-      value: -0.23621888
+      value: -0.30253157
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655822, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_Name
@@ -1332,11 +1340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655823, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.97239625
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655823, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6636506
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5803901372898655823, guid: 53827062c9ebe054da21eaac94524e27, type: 3}
       propertyPath: m_LocalScale.z
@@ -5564,7 +5572,7 @@ Transform:
   - {fileID: 1897144619}
   - {fileID: 1444743315}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &211254504
 GameObject:
@@ -128808,6 +128816,38 @@ MonoBehaviour:
   knifepref: {fileID: 7284260135824047235, guid: b8784a9288562d34b9a6ed74c726a6cc, type: 3}
   time2Liv: 1
   cooldownTime: 2
+--- !u!95 &1940145971
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940145963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c8145511a440db4db40ed7d7b5d3d23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1940145972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940145963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4da66aed703cc1479ad6c0b84990be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1940145971}
 --- !u!1 &1942107199
 GameObject:
   m_ObjectHideFlags: 0

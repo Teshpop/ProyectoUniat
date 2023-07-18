@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public GameManager Manager;
+    public Animator animator;
     //Movimiento
     private float horizontal;
     private float speed = 8f;
@@ -72,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
         //Combate
         if (Input.GetButtonDown("Fire1"))
         {
+            animator.SetTrigger("ATQINGB");
+            Debug.Log("ATQING");
             Attack();
         }
         //Salud
@@ -142,6 +145,11 @@ public class PlayerMovement : MonoBehaviour
                 enemy.GetComponent<BossHealth>().TakeDamage(25);
             }
         }
+        //animator.ResetTrigger("ATQINGB");
+    }
+    public void StopATQING()
+    {
+        animator.SetBool("ATQING", false);
     }
     private void OnDrawGizmosSelected() //Debug
     {
