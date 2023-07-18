@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangoEnemigo2D : MonoBehaviour
 {
-    
+    public Animator ani;
     public Enemigo2D enemigo;
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -13,6 +13,9 @@ public class RangoEnemigo2D : MonoBehaviour
         {
             //enemigo.atacando = true;
             //GetComponent<BoxCollider2D>().enabled = false;
+            ani.SetBool("walk", false);
+            ani.SetBool("run", false);
+            ani.SetBool("attack", true);
             Invoke("Atacarx2", 1f);
         }
     }

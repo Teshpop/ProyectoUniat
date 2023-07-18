@@ -11,6 +11,7 @@ TagManager:
   - Plataforma
   - GM
   - Knife
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
