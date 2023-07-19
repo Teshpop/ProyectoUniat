@@ -50,6 +50,7 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(VisualHBB);
         plataformaRota.SetActive(false);
         Destroy(Jefe);
         VisualHBB.SetActive(true);

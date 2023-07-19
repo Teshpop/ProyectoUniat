@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControladorWin : MonoBehaviour
 {
     [SerializeField] private string menu;
+ 
     public void BackMenu()
     {
         SceneManager.LoadScene(menu);
